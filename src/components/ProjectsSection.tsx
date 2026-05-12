@@ -36,8 +36,8 @@ function useScrollAnimation({ threshold = 0.1 } = {}) {
 // --- Data ---
 const projects = [
   {
-    title: 'RUNSA Voting Platform',
-    description: 'A comprehensive, secure online voting system with role-based access control, real-time results, candidate management, and audit logging.',
+    title: 'RUNSA Voting System',
+    description: 'A full-stack SaaS/dashboard application featuring secure role-based access control, real-time election results, and candidate management.',
     category: 'Web App',
     status: 'Live',
     features: ['Role-based Access', 'Real-time Results', 'Audit Logging'],
@@ -47,19 +47,52 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&q=80&w=1600'
   },
   {
-    title: 'Expense Tracker Dashboard',
-    description: 'A personal finance dashboard built to track income, expenses, and savings goals with real-time calculations and dynamic data visualization.',
+    title: 'TechStream E-Commerce',
+    description: 'A complete e-commerce application featuring a storefront with a shopping cart, secure authentication, payment processing, and an admin panel.',
     category: 'Web App',
     status: 'Live',
-    features: ['Real-time Tracking', 'Data Visualization', 'Savings Goals'],
-    tags: ['React', 'JavaScript', 'CSS', 'State Management'],
-    githubUrl: 'https://github.com/ITZBOBO/Expense-App',
-    liveUrl: 'https://bomen-expense-app-git-master-bobos-projects-32d66e7d.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1600'
+    features: ['Shopping Cart', 'Secure Auth', 'Admin Panel'],
+    tags: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/ITZBOBO/TechStream',
+    liveUrl: 'https://techstreamapp.netlify.app/',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600'
   },
   {
-    title: 'Hostel-Complain-App',
-    description: 'A modern, deployed complaint management system allowing students to submit and track hostel issues in real-time.',
+    title: 'Real-Time Chat App',
+    description: 'A real-time messaging application enabling instant communication, live notifications, and collaborative features.',
+    category: 'Web App',
+    status: 'Beta',
+    features: ['Live Chat', 'Notifications', 'WebSockets'],
+    tags: ['React', 'Node.js', 'Socket.io', 'Express'],
+    githubUrl: 'https://github.com/ITZBOBO/Chatapp',
+    liveUrl: '#',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1600'
+  },
+  {
+    title: '3D Igloo Crypto UI',
+    description: 'A polished UI/UX showcase project featuring a modern animated landing page and creative 3D web experiences for the crypto space.',
+    category: 'Web App',
+    status: 'Live',
+    features: ['3D Animations', 'Modern UI', 'Responsive Design'],
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Three.js'],
+    githubUrl: 'https://github.com/ITZBOBO/IGLOO-CRYTO-WEBSITE',
+    liveUrl: '#',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1600'
+  },
+  {
+    title: 'Blog App Backend API',
+    description: 'A backend/API-focused system serving as a stateless REST API with secure authentication, token management, and database operations.',
+    category: 'Data',
+    status: 'Live',
+    features: ['RESTful API', 'JWT Auth', 'Data Modeling'],
+    tags: ['Node.js', 'Express', 'MongoDB', 'Bcrypt'],
+    githubUrl: 'https://github.com/ITZBOBO/BlogApp.git',
+    liveUrl: '#',
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1600'
+  },
+  {
+    title: 'Hostel Complaint System',
+    description: 'A unique problem-solving application that modernizes hostel management by allowing students to submit, track, and resolve complaints dynamically.',
     category: 'Web App',
     status: 'Live',
     features: ['Issue Tracking', 'Student Dashboard', 'Real-time Updates'],
@@ -67,39 +100,6 @@ const projects = [
     githubUrl: 'https://github.com/ITZBOBO/Hostel-Complain-App',
     liveUrl: 'https://hostel-complain-app.vercel.app',
     image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=1600'
-  },
-  {
-    title: 'React Native Mobile App',
-    description: 'A cross-platform mobile application demonstrating native UI paradigms, smooth navigation, and optimized component rendering.',
-    category: 'Mobile',
-    status: 'Live',
-    features: ['Cross-platform', 'Native UI', 'Smooth Nav'],
-    tags: ['React Native', 'Expo', 'JavaScript'],
-    githubUrl: 'https://github.com/ITZBOBO/git-assignment-2',
-    liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1600'
-  },
-  {
-    title: 'Blog App Backend',
-    description: 'A robust backend API for a blog application, featuring secure user authentication, content management, and data delivery.',
-    category: 'Data',
-    status: 'Live',
-    features: ['RESTful API', 'User Authentication', 'Database Management'],
-    tags: ['Node.js', 'Express', 'MongoDB'],
-    githubUrl: 'https://github.com/ITZBOBO/BlogApp.git',
-    liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1600'
-  },
-  {
-    title: 'Terminal Portfolio',
-    description: 'A creative, highly interactive developer portfolio themed as a command-line interface. Users navigate your experience by typing terminal commands.',
-    category: 'Web App',
-    status: 'Live',
-    features: ['CLI Interface', 'Interactive Shell', 'Custom Commands'],
-    tags: ['JavaScript', 'HTML5', 'CSS3', 'DOM Manipulation'],
-    githubUrl: 'https://github.com/ITZBOBO/terminal-portfolio',
-    liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1600'
   }
 ];
 
