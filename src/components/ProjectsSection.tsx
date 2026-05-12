@@ -128,8 +128,8 @@ const PreviewModal = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 animate-in fade-in duration-200">
       {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-[hsl(var(--background)/0.8)] backdrop-blur-sm" 
+      <div
+        className="absolute inset-0 bg-[hsl(var(--background)/0.8)] backdrop-blur-sm"
         onClick={onClose}
       ></div>
 
@@ -139,21 +139,21 @@ const PreviewModal = ({ project, onClose }) => {
         <div className="flex items-center justify-between px-6 py-4 border-b border-[hsl(var(--border)/0.4)] bg-[hsl(var(--background)/0.6)]">
           <div className="flex items-center gap-4">
             <div className="p-2 bg-[hsl(var(--primary)/0.1)] rounded-lg text-[hsl(var(--primary))]">
-               <Monitor size={20} />
+              <Monitor size={20} />
             </div>
             <div>
-                <h2 className="text-xl font-bold text-[hsl(var(--foreground))] tracking-wide font-display">{project.title}</h2>
-                <div className="flex items-center gap-3 text-xs text-[hsl(var(--muted-foreground))] mt-1">
-                    <span className="flex items-center gap-1.5">
-                       <span className="w-2 h-2 rounded-full bg-[hsl(var(--primary))] animate-pulse"></span>
-                       Live Preview
-                    </span>
-                    <span className="w-1 h-1 rounded-full bg-[hsl(var(--muted-foreground)/0.5)]"></span>
-                    <span className="uppercase tracking-wider font-semibold text-[hsl(var(--secondary))]">{project.status}</span>
-                </div>
+              <h2 className="text-xl font-bold text-[hsl(var(--foreground))] tracking-wide font-display">{project.title}</h2>
+              <div className="flex items-center gap-3 text-xs text-[hsl(var(--muted-foreground))] mt-1">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[hsl(var(--primary))] animate-pulse"></span>
+                  Live Preview
+                </span>
+                <span className="w-1 h-1 rounded-full bg-[hsl(var(--muted-foreground)/0.5)]"></span>
+                <span className="uppercase tracking-wider font-semibold text-[hsl(var(--secondary))]">{project.status}</span>
+              </div>
             </div>
           </div>
-          <button 
+          <button
             onClick={onClose}
             className="p-2 hover:bg-[hsl(var(--primary)/0.1)] rounded-full text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-colors"
           >
@@ -163,11 +163,11 @@ const PreviewModal = ({ project, onClose }) => {
 
         {/* Content */}
         <div className="flex flex-col lg:flex-row h-full overflow-hidden">
-          
+
           {/* Browser Preview */}
           <div className="w-full lg:w-3/4 bg-black/40 p-4 lg:p-8 flex items-center justify-center relative">
-             <div className="absolute inset-0 grid-pattern opacity-20"></div>
-             {/* Mock Browser Window */}
+            <div className="absolute inset-0 grid-pattern opacity-20"></div>
+            {/* Mock Browser Window */}
             <div className="relative w-full h-full flex flex-col rounded-xl overflow-hidden border border-[hsl(var(--border))] shadow-2xl bg-[hsl(var(--muted))] z-10">
               {/* Browser Toolbar — hidden on mobile */}
               {!isMobile && (
@@ -177,14 +177,14 @@ const PreviewModal = ({ project, onClose }) => {
                     <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                     <div className="w-3 h-3 rounded-full bg-green-500/80" />
                   </div>
-                  
+
                   {/* Address Bar */}
                   <div className="flex-1 bg-black/30 rounded px-4 py-1.5 text-xs text-center text-[hsl(var(--muted-foreground))] font-mono flex items-center justify-between group cursor-text border border-transparent hover:border-[hsl(var(--primary)/0.2)] transition-colors">
-                    <span className="opacity-50"><Globe size={12}/></span>
+                    <span className="opacity-50"><Globe size={12} /></span>
                     <span className="mx-2 truncate">{project.liveUrl ? project.liveUrl : `localhost:3000/projects/${project.title.toLowerCase().replace(/\s/g, '-')}`}</span>
                     {project.liveUrl && (
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="opacity-50 hover:opacity-100 transition-opacity text-[hsl(var(--primary))]">
-                        <ExternalLink size={12}/>
+                        <ExternalLink size={12} />
                       </a>
                     )}
                   </div>
@@ -259,59 +259,59 @@ const PreviewModal = ({ project, onClose }) => {
           {/* Sidebar Details */}
           <div className="w-full lg:w-1/4 bg-[hsl(var(--card)/0.4)] border-l border-[hsl(var(--border)/0.5)] flex flex-col h-full backdrop-blur-sm">
             <div className="p-6 overflow-y-auto flex-1">
-                <div className="mb-8">
-                    <h3 className="text-xs uppercase tracking-wider text-[hsl(var(--primary))] font-bold mb-3 flex items-center gap-2 font-display">
-                        <Folder size={14} /> Overview
-                    </h3>
-                    <p className="text-[hsl(var(--muted-foreground))] text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                </div>
+              <div className="mb-8">
+                <h3 className="text-xs uppercase tracking-wider text-[hsl(var(--primary))] font-bold mb-3 flex items-center gap-2 font-display">
+                  <Folder size={14} /> Overview
+                </h3>
+                <p className="text-[hsl(var(--muted-foreground))] text-sm leading-relaxed">
+                  {project.description}
+                </p>
+              </div>
 
-                <div className="mb-8">
-                    <h3 className="text-xs uppercase tracking-wider text-[hsl(var(--primary))] font-bold mb-3 font-display flex items-center gap-2">
-                        <Layers size={14} /> Key Features
-                    </h3>
-                    <ul className="space-y-2">
-                      {project.features?.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[hsl(var(--foreground)/0.8)]">
-                          <span className="mt-1.5 w-1 h-1 rounded-full bg-[hsl(var(--secondary))] shrink-0" />
-                          {feature}
-                        </li>
-                      )) || <li className="text-sm text-[hsl(var(--muted-foreground))]">Detailed features list coming soon.</li>}
-                    </ul>
+              <div className="mb-8">
+                <h3 className="text-xs uppercase tracking-wider text-[hsl(var(--primary))] font-bold mb-3 font-display flex items-center gap-2">
+                  <Layers size={14} /> Key Features
+                </h3>
+                <ul className="space-y-2">
+                  {project.features?.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-[hsl(var(--foreground)/0.8)]">
+                      <span className="mt-1.5 w-1 h-1 rounded-full bg-[hsl(var(--secondary))] shrink-0" />
+                      {feature}
+                    </li>
+                  )) || <li className="text-sm text-[hsl(var(--muted-foreground))]">Detailed features list coming soon.</li>}
+                </ul>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="text-xs uppercase tracking-wider text-[hsl(var(--primary))] font-bold mb-3 font-display">Tech Stack</h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="px-2.5 py-1 bg-[hsl(var(--primary)/0.1)] rounded border border-[hsl(var(--primary)/0.2)] text-xs text-[hsl(var(--primary))]">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-                
-                <div className="mb-6">
-                    <h3 className="text-xs uppercase tracking-wider text-[hsl(var(--primary))] font-bold mb-3 font-display">Tech Stack</h3>
-                    <div className="flex flex-wrap gap-2">
-                    {project.tags.map(tag => (
-                        <span key={tag} className="px-2.5 py-1 bg-[hsl(var(--primary)/0.1)] rounded border border-[hsl(var(--primary)/0.2)] text-xs text-[hsl(var(--primary))]">
-                        {tag}
-                        </span>
-                    ))}
-                    </div>
-                </div>
+              </div>
             </div>
 
             <div className="p-6 border-t border-[hsl(var(--border)/0.5)] bg-[hsl(var(--background)/0.2)]">
-                {project.liveUrl ? (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary)/0.9)] text-[hsl(var(--primary-foreground))] py-3 rounded-lg font-medium transition-all mb-3 shadow-[0_0_15px_hsl(var(--primary)/0.2)] hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
-                  >
-                    <Globe size={16} /> Visit Live Site
-                  </a>
-                ) : (
-                  <button disabled className="w-full flex items-center justify-center gap-2 bg-[hsl(var(--muted))] text-[hsl(var(--muted-foreground))] py-3 rounded-lg font-medium mb-3 cursor-not-allowed opacity-50">
-                    <Globe size={16} /> No Live URL
-                  </button>
-                )}
-                <div className="flex justify-between text-[10px] text-[hsl(var(--muted-foreground))] uppercase tracking-widest text-center opacity-60">
-                   <span>Secure</span> • <span>Fast</span> • <span>Scalable</span>
-                </div>
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary)/0.9)] text-[hsl(var(--primary-foreground))] py-3 rounded-lg font-medium transition-all mb-3 shadow-[0_0_15px_hsl(var(--primary)/0.2)] hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
+                >
+                  <Globe size={16} /> Visit Live Site
+                </a>
+              ) : (
+                <button disabled className="w-full flex items-center justify-center gap-2 bg-[hsl(var(--muted))] text-[hsl(var(--muted-foreground))] py-3 rounded-lg font-medium mb-3 cursor-not-allowed opacity-50">
+                  <Globe size={16} /> No Live URL
+                </button>
+              )}
+              <div className="flex justify-between text-[10px] text-[hsl(var(--muted-foreground))] uppercase tracking-widest text-center opacity-60">
+                <span>Secure</span> • <span>Fast</span> • <span>Scalable</span>
+              </div>
             </div>
           </div>
 
@@ -323,21 +323,21 @@ const PreviewModal = ({ project, onClose }) => {
 
 const ProjectCard = ({ title, description, tags, githubUrl, liveUrl = undefined, category, onClick }) => {
   return (
-    <div 
+    <div
       className="group relative bg-[hsl(var(--card))] rounded-xl p-6 hover:border-[hsl(var(--primary)/0.5)] border border-[hsl(var(--border)/0.5)] transition-all duration-300 flex flex-col h-full cursor-pointer overflow-hidden"
       onClick={onClick}
     >
       {/* Top Gradient Line */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary))] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
+
       {/* Icons Header */}
       <div className="flex justify-between items-start mb-4">
         <div className="flex items-center gap-3">
           <div className="text-[hsl(var(--primary))] group-hover:text-[hsl(var(--primary))] transition-colors">
-            {category === 'Mobile' ? <Smartphone size={24} strokeWidth={1.5} /> : 
-             category === 'Data' ? <Database size={24} strokeWidth={1.5} /> :
-             category === 'Tools' ? <Terminal size={24} strokeWidth={1.5} /> :
-             <Monitor size={24} strokeWidth={1.5} />}
+            {category === 'Mobile' ? <Smartphone size={24} strokeWidth={1.5} /> :
+              category === 'Data' ? <Database size={24} strokeWidth={1.5} /> :
+                category === 'Tools' ? <Terminal size={24} strokeWidth={1.5} /> :
+                  <Monitor size={24} strokeWidth={1.5} />}
           </div>
           <span className="text-[10px] font-bold uppercase tracking-wider text-[hsl(var(--muted-foreground))] border border-[hsl(var(--border))] px-2 py-0.5 rounded-full">
             {category}
@@ -378,13 +378,13 @@ const ProjectCard = ({ title, description, tags, githubUrl, liveUrl = undefined,
 const LogoMarqueeIconsOnly = ({ items, speedSeconds, direction = 'left' }) => {
   return (
     <div className="relative flex overflow-hidden w-full mask-gradient-x py-8">
-      <div 
+      <div
         className={cn("flex gap-16 min-w-full animate-scroll", direction === 'right' && 'direction-reverse')}
         style={{ animationDuration: `${speedSeconds}s` }}
       >
         {[...items, ...items].map((item, idx) => (
           <div key={`${item.name}-${idx}`} className="flex items-center justify-center min-w-[60px] grayscale hover:grayscale-0 transition-all opacity-40 hover:opacity-100">
-             <img src={item.src} alt={item.name} className="w-10 h-10 object-contain" />
+            <img src={item.src} alt={item.name} className="w-10 h-10 object-contain" />
           </div>
         ))}
       </div>
@@ -414,7 +414,7 @@ const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   // Filter projects based on active category
-  const filteredProjects = projects.filter(project => 
+  const filteredProjects = projects.filter(project =>
     activeCategory === 'All' || project.category === activeCategory
   );
 
@@ -481,25 +481,25 @@ const ProjectsSection = () => {
           </div>
 
           {/* Category Filter */}
-          <div 
+          <div
             className={cn(
-                "flex flex-wrap justify-center gap-2 mb-12 transition-all duration-700 delay-100",
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              "flex flex-wrap justify-center gap-2 mb-12 transition-all duration-700 delay-100",
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             )}
           >
             {CATEGORIES.map((category) => (
-                <button
-                    key={category}
-                    onClick={() => setActiveCategory(category)}
-                    className={cn(
-                        "px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 border",
-                        activeCategory === category 
-                            ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] border-[hsl(var(--primary))] shadow-[0_0_15px_hsl(var(--primary)/0.4)]" 
-                            : "bg-[hsl(var(--card))] text-[hsl(var(--muted-foreground))] border-[hsl(var(--border))] hover:border-[hsl(var(--primary)/0.5)] hover:text-[hsl(var(--foreground))]"
-                    )}
-                >
-                    {category}
-                </button>
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={cn(
+                  "px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 border",
+                  activeCategory === category
+                    ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] border-[hsl(var(--primary))] shadow-[0_0_15px_hsl(var(--primary)/0.4)]"
+                    : "bg-[hsl(var(--card))] text-[hsl(var(--muted-foreground))] border-[hsl(var(--border))] hover:border-[hsl(var(--primary)/0.5)] hover:text-[hsl(var(--foreground))]"
+                )}
+              >
+                {category}
+              </button>
             ))}
           </div>
 
@@ -513,17 +513,17 @@ const ProjectsSection = () => {
                 )}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <ProjectCard 
-                  {...project} 
+                <ProjectCard
+                  {...project}
                   onClick={() => setSelectedProject(project)}
                 />
               </div>
             ))}
             {filteredProjects.length === 0 && (
-                 <div className="col-span-full flex flex-col items-center justify-center text-[hsl(var(--muted-foreground))] py-20">
-                    <Folder size={48} className="mb-4 opacity-20" />
-                    <p>No projects found in this category.</p>
-                 </div>
+              <div className="col-span-full flex flex-col items-center justify-center text-[hsl(var(--muted-foreground))] py-20">
+                <Folder size={48} className="mb-4 opacity-20" />
+                <p>No projects found in this category.</p>
+              </div>
             )}
           </div>
 
@@ -563,9 +563,9 @@ const ProjectsSection = () => {
 
       {/* Live Preview Modal Overlay */}
       {selectedProject && (
-        <PreviewModal 
-          project={selectedProject} 
-          onClose={() => setSelectedProject(null)} 
+        <PreviewModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
         />
       )}
     </div>
