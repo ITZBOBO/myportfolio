@@ -36,26 +36,26 @@ function useScrollAnimation({ threshold = 0.1 } = {}) {
 // --- Data ---
 const projects = [
   {
-    title: 'NeonBoard portfolio',
-    description: 'A real-time collaborative dashboard with WebSocket integration and dynamic data visualization for teams.',
+    title: 'RUNSA Voting Platform',
+    description: 'A comprehensive, secure online voting system with role-based access control, real-time results, candidate management, and audit logging.',
     category: 'Web App',
     status: 'Live',
-    features: ['Real-time cursors', 'Live chat', 'Data export'],
-    tags: ['React', 'TypeScript', 'Socket.io', 'D3.js'],
+    features: ['Role-based Access', 'Real-time Results', 'Audit Logging'],
+    tags: ['Next.js', 'React', 'Node.js', 'Express', 'Prisma', 'Redis'],
     githubUrl: 'https://github.com/ITZBOBO',
     liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600'
+    image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&q=80&w=1600'
   },
   {
-    title: 'TechStream',
-    description: 'Full-stack e-commerce platform with AI-powered product recommendations and secure payment processing.',
+    title: 'Expense Tracker Dashboard',
+    description: 'A personal finance dashboard built to track income, expenses, and savings goals with real-time calculations and dynamic data visualization.',
     category: 'Web App',
-    status: 'In Progress',
-    features: ['AI Search', 'Stripe Connect', 'Admin Panel'],
-    tags: ['React 18', 'Vite', 'Tailwind CSS', 'PostCSS', 'Lucide React', 'JavaScript', 'LocalStorage API'],
-    githubUrl: 'https://github.com/ITZBOBO',
-    liveUrl: 'https://techstreamapp.netlify.app/',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600'
+    status: 'Live',
+    features: ['Real-time Tracking', 'Data Visualization', 'Savings Goals'],
+    tags: ['React', 'JavaScript', 'CSS', 'State Management'],
+    githubUrl: 'https://github.com/ITZBOBO/Expense-App',
+    liveUrl: 'https://bomen-expense-app-git-master-bobos-projects-32d66e7d.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1600'
   },
   {
     title: 'Hostel-Complain-App',
@@ -69,15 +69,15 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=1600'
   },
   {
-    title: 'CRM',
-    description: 'Real-time messaging application with end-to-end encryption and futuristic UI design.',
+    title: 'React Native Mobile App',
+    description: 'A cross-platform mobile application demonstrating native UI paradigms, smooth navigation, and optimized component rendering.',
     category: 'Mobile',
-    status: 'Beta',
-    features: ['E2E Encryption', 'Voice Calls', 'File Sharing'],
-    tags: ['React Native', 'Firebase', 'WebRTC'],
-    githubUrl: 'https://github.com/ITZBOBO',
+    status: 'Live',
+    features: ['Cross-platform', 'Native UI', 'Smooth Nav'],
+    tags: ['React Native', 'Expo', 'JavaScript'],
+    githubUrl: 'https://github.com/ITZBOBO/git-assignment-2',
     liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1600'
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1600'
   },
   {
     title: 'Blog App Backend',
@@ -87,19 +87,20 @@ const projects = [
     features: ['RESTful API', 'User Authentication', 'Database Management'],
     tags: ['Node.js', 'Express', 'MongoDB'],
     githubUrl: 'https://github.com/ITZBOBO/BlogApp.git',
+    liveUrl: '#',
     image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1600'
   },
   {
-    title: 'CinemaSafari',
-    description: 'Feature-rich movie discovery platform featuring live autocomplete search, native YouTube trailer integration, local favorites, and infinite scrolling.',
+    title: 'Terminal Portfolio',
+    description: 'A creative, highly interactive developer portfolio themed as a command-line interface. Users navigate your experience by typing terminal commands.',
     category: 'Web App',
     status: 'Live',
-    features: ['YouTube Integration', 'Infinite Scroll', 'Favorites System'],
-    tags: ['React 18', 'Tailwind CSS', 'LocalStorage', 'REST API'],
-    githubUrl: 'https://github.com/ITZBOBO',
-    liveUrl: 'https://cinemasafari.netlify.app',
-    image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1600'
-  },
+    features: ['CLI Interface', 'Interactive Shell', 'Custom Commands'],
+    tags: ['JavaScript', 'HTML5', 'CSS3', 'DOM Manipulation'],
+    githubUrl: 'https://github.com/ITZBOBO/terminal-portfolio',
+    liveUrl: '#',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1600'
+  }
 ];
 
 const CATEGORIES = ['All', 'Web App', 'Mobile', 'Tools', 'Data'];
