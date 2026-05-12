@@ -88,7 +88,7 @@ const projects = [
     tags: ['Node.js', 'Express', 'MongoDB', 'Bcrypt'],
     githubUrl: 'https://github.com/ITZBOBO/BlogApp.git',
     liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1600'
+    image: '/blog_api_structure.png'
   },
   {
     title: 'Hostel Complaint System',
