@@ -76,7 +76,7 @@ const projects = [
     features: ['3D Animations', 'Modern UI', 'Responsive Design'],
     tags: ['HTML5', 'CSS3', 'JavaScript', 'Three.js'],
     githubUrl: 'https://github.com/ITZBOBO/IGLOO-CRYTO-WEBSITE',
-    liveUrl: '#',
+    liveUrl: 'https://iglooo.netlify.app/',
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1600'
   },
   {
